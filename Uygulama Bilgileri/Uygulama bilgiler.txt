@@ -1,5 +1,0 @@
-terms : https://sites.google.com/view/spacemagazinetermsconditions
-
-privacy : https://sites.google.com/view/spacemagazineprivacypolicy
-
-keystore password : spacemagazine9865
