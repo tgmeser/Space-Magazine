@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Communicate">
+
+        <menu>
+
+            <item
+                android:title="Share App"
+                android:id="@+id/shareApp"
+                android:icon="@drawable/ic_sharing"/>
+
+            <item
+                android:id="@+id/rateApp"
+                android:title="Rate this App"
+                android:icon="@drawable/ic_google_play"/>
+
+            <item
+                android:id="@+id/contactUs"
+                android:title="Contact Us"
+                android:icon="@drawable/ic_email"/>
+
+        </menu>
+    </item>
+    <item android:title="About">
+
+        <menu>
+            <item
+                android:title="App Informations"
+                android:id="@+id/appInfoFragment"
+                android:icon="@drawable/ic_phone_icon"/>
+            <item
+                android:title="Privacy Policy"
+                android:id="@+id/privacyPolicy"
+                android:icon="@drawable/ic_policy_icon"/>
+
+            <item
+                android:id="@+id/termsAndConditions"
+                android:title="Terms and Conditions"
+                android:icon="@drawable/ic_terms_icon"/>
+
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBlog"
+            android:layout_width="160dp"
+            android:layout_height="90dp" />
+
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/molengo"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textColor="@color/darkGrey"
+                android:textSize="18sp" />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/molengo"
+            android:text="Summary"
+            android:textColor="@color/darkGrey" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPublishDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/molengo"
+                android:gravity="center|start"
+                android:text=" yyyy/mm/dd , "
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_date_dark" />
+            <TextView
+                android:id="@+id/tvPublishTime"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/tvPublishDate"
+                android:layout_margin="2dp"
+                android:gravity="center|start"
+                android:fontFamily="@font/molengo"
+                android:textSize="16sp"
+                android:textColor="@color/darkGrey"
+                app:drawableStartCompat="@drawable/ic_time_dark"
+                android:text=" 00:00"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNewssite"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/molengo"
+                android:gravity="center|start"
+                android:text=" Web Source"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_web_dark" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

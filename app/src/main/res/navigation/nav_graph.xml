@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articlesFragment">
+
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.babyapps.spacemagazine.features.article.ArticlesFragment"
+        android:label="Articles"
+        tools:layout="@layout/fragment_articles">
+        <action
+            android:id="@+id/action_articlesFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogsFragment"
+        android:name="com.babyapps.spacemagazine.features.blog.BlogsFragment"
+        android:label="Blogs"
+        tools:layout="@layout/fragment_blogs" >
+        <action
+            android:id="@+id/action_blogsFragment_to_blogFragment"
+            app:destination="@id/blogFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.babyapps.spacemagazine.features.report.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_reportFragment"
+            app:destination="@id/reportFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.babyapps.spacemagazine.features.article.ArticleFragment"
+        android:label="Web Source"
+        tools:layout="@layout/fragment_article">
+        <argument
+            android:name="articleDto"
+            app:argType="com.babyapps.spacemagazine.data.remote.dto.ArticleDto" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_favoriteArticlesFragment"
+            app:destination="@id/favoriteArticlesFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_favoritesFragment_to_favoriteBlogsFragment"
+            app:destination="@id/favoriteBlogsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_favoriteReportsFragment"
+            app:destination="@id/favoriteReportsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.babyapps.spacemagazine.features.blog.BlogFragment"
+        android:label="Web Source"
+        tools:layout="@layout/fragment_blog">
+        <argument
+            android:name="blogDto"
+            app:argType="com.babyapps.spacemagazine.data.remote.dto.BlogDto" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.babyapps.spacemagazine.features.report.ReportFragment"
+        android:label="Web Source"
+        tools:layout="@layout/fragment_report">
+        <argument
+            android:name="reportDto"
+            app:argType="com.babyapps.spacemagazine.data.remote.dto.ReportDto" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteArticlesFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.article_fav.FavoriteArticlesFragment"
+        android:label="Favorite Articles"
+        tools:layout="@layout/fragment_favorite_articles" >
+        <action
+            android:id="@+id/action_favoriteArticlesFragment_to_favoriteArticleFragment"
+            app:destination="@id/favoriteArticleFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteArticleFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.article_fav.FavoriteArticleFragment"
+        android:label="Favorite Article"
+        tools:layout="@layout/fragment_favorite_article" >
+        <argument
+            android:name="favoriteArticle"
+            app:argType="com.babyapps.spacemagazine.domain.model.Article" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/deleteFavorites"
+        android:name="com.babyapps.spacemagazine.features.favorite.article_fav.DeleteFavoriteArticlesFragment"
+        android:label="DeleteFavorites" />
+    <action
+        android:id="@+id/action_global_deleteFavoritesragment"
+        app:destination="@+id/deleteFavorites" />
+
+    <dialog
+        android:id="@+id/deleteBlogFavorites"
+        android:name="com.babyapps.spacemagazine.features.favorite.blog_fav.DeleteFavoriteBlogsFragment"
+        android:label="DeleteFavorites" />
+    <action
+        android:id="@+id/action_global_deleteBlogFavoritesragment"
+        app:destination="@+id/deleteBlogFavorites" />
+
+    <dialog
+        android:id="@+id/deleteReportFavorites"
+        android:name="com.babyapps.spacemagazine.features.favorite.report_fav.DeleteFavoriteReportsFragment"
+        android:label="DeleteFavorites" />
+    <action
+        android:id="@+id/action_global_deleteReportFavoritesragment"
+        app:destination="@+id/deleteReportFavorites" />
+
+
+    <fragment
+        android:id="@+id/favoriteBlogsFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.blog_fav.FavoriteBlogsFragment"
+        android:label="Favorite Blogs"
+        tools:layout="@layout/fragment_favorite_blogs">
+        <action
+            android:id="@+id/action_favoriteBlogsFragment_to_favoriteBlogFragment"
+            app:destination="@id/favoriteBlogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteBlogFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.blog_fav.FavoriteBlogFragment"
+        android:label="Favorite Blog"
+        tools:layout="@layout/fragment_favorite_blog">
+        <argument
+            android:name="favoriteBlog"
+            app:argType="com.babyapps.spacemagazine.domain.model.Blog" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteReportsFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.report_fav.FavoriteReportsFragment"
+        android:label="Favorite Reports"
+        tools:layout="@layout/fragment_favorite_reports" >
+        <action
+            android:id="@+id/action_favoriteReportsFragment_to_favoriteReportFragment"
+            app:destination="@id/favoriteReportFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteReportFragment"
+        android:name="com.babyapps.spacemagazine.features.favorite.report_fav.FavoriteReportFragment"
+        android:label="Favorite Report"
+        tools:layout="@layout/fragment_favorite_report" >
+        <argument
+            android:name="favoriteReport"
+            app:argType="com.babyapps.spacemagazine.domain.model.Report" />
+    </fragment>
+    <fragment
+        android:id="@+id/appInfoFragment"
+        android:name="com.babyapps.spacemagazine.features.AppInfoFragment"
+        android:label="App Informations"
+        tools:layout="@layout/fragment_app_info" />
+</navigation>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".features.AppInfoFragment">
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/newspaper" />
+
+            <TextView
+                android:id="@+id/tvApp"
+                android:textColor="@color/darkGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Space Magazine"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:textColor="@color/darkGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="Version 1.0.0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:textColor="@color/darkGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="@string/app_info_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvApi"
+                android:textColor="@color/topRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Api by spaceflightnewsapi.net"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvRights"
+                android:layout_width="wrap_content"
+                android:textColor="@color/topLightBlue"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="All rights reserved 2021©"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvMe"
+                android:textColor="@color/topLightBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Developed by Mücteba Eser"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="@color/topLightBlue"
+                android:text="  Send Email"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_email" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
