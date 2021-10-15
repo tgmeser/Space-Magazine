@@ -9,7 +9,7 @@ Toolkit
   - Flow
   - Livedata
   - Viewmodel
-  - MVVM/Offline Caching
+  - Offline Caching
   - Hilt
   - Navigation
   - Room
